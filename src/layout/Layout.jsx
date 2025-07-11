@@ -4,13 +4,13 @@ import './Layout.css'
 
 const Layout = () => {
     return (
-        <div>
-              <nav>
+        <div className="">
+            <nav>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/login">Login</NavLink>
                 <NavLink to="/register">Register</NavLink>
             </nav>
-            <div>
+            <div className="main-container">
                 <Outlet></Outlet>
             </div>
         </div>

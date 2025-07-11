@@ -1,17 +1,43 @@
-nav{
-   /* background: red; */ 
-   text-align: center;
-   gap: 20px;
-   display: flex;
-   justify-content: center;
-   text-decoration: none;
-   padding: 20px 0px;
-   background: rgba(131, 192, 74, 0.319);
+
+
+nav {
+    /* background: red; */
+    text-align: center;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 20px 0px;
+    background: rgba(131, 192, 74, 0.319);
 
 
 }
+
 nav a {
     text-decoration: none;
     font-size: 26px;
     color: rgba(39, 39, 39, 0.525);
 }
+
+
+@media (min-width: 80rem) {
+    .main-container {
+        width: 1280px;
+        margin: 0px auto;
+    }
+}
+@media (max-width: 80rem) {
+      .main-container {
+       width: 100%;
+       padding: 0px 10px;
+       background: orange;
+    }
+}
+@media (max-width: 40rem) {
+      .main-container {
+       width: 100%;
+       padding: 0px 10px;
+       background: green;
+    }
+}
+
