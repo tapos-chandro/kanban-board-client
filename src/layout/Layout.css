@@ -1,0 +1,17 @@
+nav{
+   /* background: red; */ 
+   text-align: center;
+   gap: 20px;
+   display: flex;
+   justify-content: center;
+   text-decoration: none;
+   padding: 20px 0px;
+   background: rgba(131, 192, 74, 0.319);
+
+
+}
+nav a {
+    text-decoration: none;
+    font-size: 26px;
+    color: rgba(39, 39, 39, 0.525);
+}
