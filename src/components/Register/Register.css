@@ -1,4 +1,4 @@
-.login-container{
+.register-container{
     width: 40%;
     margin: 0px auto;
     border: 1px solid silver;
@@ -10,7 +10,7 @@
 .login-title{
     text-align: center;
 }
-.email,.password, .button {
+.email,.password, .button ,.name{
     width: 100%;
     padding: 10px ;
     border-radius: 5px;
@@ -26,7 +26,7 @@
 }
 
 @media (max-width: 40rem) {
-      .login-container {
+      .register-container {
        width: 100%;
        padding: 30px 10px;
     }
