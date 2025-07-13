@@ -11,3 +11,19 @@
 .error{
   color: red;
 }
+.loading{
+  text-align: center;
+  padding: 50px;
+}
+
+.logout-btn{
+  padding: 0px 20px;
+  color:rgba(255, 255, 255, 0.782);
+  background: rgba(7, 115, 10, 0.764);
+  border: none;
+  border-radius: 5px;
+}
+.logout-btn:hover{
+  cursor: pointer;
+  background: #005e05;
+}

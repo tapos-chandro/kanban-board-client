@@ -7,35 +7,47 @@ import auth from './../firebase/firebase.config';
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState({})
+    const [loading , setLoading] = useState(true)
 
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const userProfileUpdate = (userName) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, {
             displayName: userName
         })
 
     }
     const logInUser = (email , password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const logOutUser = () => {
+        setLoading(true)
         return signOut(auth)
     }
 
     useEffect(() => {
+
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            setLoading(false)
+             
             if (currentUser) {
+              
                 setUser(currentUser)
+                setLoading(false)
             }
+
+
 
             () => unsubscribe()
         })
 
-    }, [])
+    }, [loading])
 
 
     const authInfo = {
@@ -44,8 +56,8 @@ const AuthProvider = ({ children }) => {
         setUser,
         userProfileUpdate,
         logOutUser,
-        logInUser
-
+        logInUser,
+        loading
     }
 
 
